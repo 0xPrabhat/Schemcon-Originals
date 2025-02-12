@@ -26,8 +26,8 @@ const timelineEvents = [
 
 export function Submissions() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-[#0A0A0A]">
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-[#0A0A0A]">
+      <div className="container mx-auto px-4 pt-8">
         <h1 className="text-5xl font-bold text-center mb-16">
           <span className="text-pink-500 dark:text-[#00FF00]">Submissions</span>{' '}
           <span className="text-gray-900 dark:text-white">& Templates</span>
@@ -91,41 +91,44 @@ export function Submissions() {
         </div>
 
         {/* Download Templates Section */}
-        <div className="backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 rounded-xl p-8
-          border border-pink-200 dark:border-zinc-700
-          hover:border-pink-500 dark:hover:border-[#00FF00]
-          transition-all duration-300 shadow-lg">
-          <h2 className="text-3xl font-bold text-pink-500 dark:text-[#00FF00] mb-6">Download Templates</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a
-              href="#"
-              className="flex items-center justify-center p-6 
-                bg-white dark:bg-zinc-800 rounded-lg 
-                border-2 border-pink-200 dark:border-zinc-700
-                hover:border-pink-500 dark:hover:border-[#00FF00]
-                hover:bg-pink-50 dark:hover:bg-zinc-700/50
-                transition-all duration-300 group"
-            >
-              <span className="text-gray-700 dark:text-gray-200 font-semibold 
-                group-hover:text-pink-500 dark:group-hover:text-[#00FF00]">
-                Abstract Template (DOCX)
-              </span>
-            </a>
-            <a
-              href="#"
-              className="flex items-center justify-center p-6 
-                bg-white dark:bg-zinc-800 rounded-lg 
-                border-2 border-pink-200 dark:border-zinc-700
-                hover:border-pink-500 dark:hover:border-[#00FF00]
-                hover:bg-pink-50 dark:hover:bg-zinc-700/50
-                transition-all duration-300 group"
-            >
-              <span className="text-gray-700 dark:text-gray-200 font-semibold 
-                group-hover:text-pink-500 dark:group-hover:text-[#00FF00]">
-                Paper Template (DOCX)
-              </span>
-            </a>
-          </div>
+        <div className="grid gap-6">
+          {[{
+            title: "Abstract Template",
+            formats: [{ name: "DOCX", link: "/Abstract-template.docx" }, { name: "PDF", link: "/Abstract-template.pdf" }]
+          }, {
+            title: "Presentation Template",
+            formats: [{ name: "PPT", link: "/Presentation-template.pptx" }, { name: "PDF", link: "/Presentation-template.pdf" }]
+          }, {
+            title: "Poster Template",
+            formats: [{ name: "PPT", link: "/Poster.pptx" }]
+          }].map((section, index) => (
+            <div key={index} className="backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 rounded-xl p-8
+              border border-pink-200 dark:border-zinc-700
+              hover:border-pink-500 dark:hover:border-[#00FF00]
+              transition-all duration-300 shadow-lg">
+              <h2 className="text-3xl font-bold text-pink-500 dark:text-[#00FF00] mb-6">{section.title}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {section.formats.map((format, idx) => (
+                  <a
+                    key={idx}
+                    href={format.link}
+                    download
+                    className="flex items-center justify-center p-6 
+                      bg-white dark:bg-zinc-800 rounded-lg 
+                      border-2 border-pink-200 dark:border-zinc-700
+                      hover:border-pink-500 dark:hover:border-[#00FF00]
+                      hover:bg-pink-50 dark:hover:bg-zinc-700/50
+                      transition-all duration-300 group"
+                  >
+                    <span className="text-gray-700 dark:text-gray-200 font-semibold 
+                      group-hover:text-pink-500 dark:group-hover:text-[#00FF00]">
+                      {section.title} ({format.name})
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
