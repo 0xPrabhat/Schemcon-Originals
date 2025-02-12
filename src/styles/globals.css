@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 332 100% 65%; /* Pink for light mode */
+    --primary-dark: 120 100% 50%; /* Green for dark mode */
+    
+    /* Light mode */
+    .light {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 0%;
+      --accent: var(--primary);
+    }
+    
+    /* Dark mode */
+    .dark {
+      --background: 0 0% 4%;
+      --foreground: 0 0% 100%;
+      --accent: var(--primary-dark);
+    }
+  }
+}
+
+/* Reusable classes */
+.neu-brutal-card {
+  @apply shadow-lg rounded-lg transition-all duration-300;
+}
+
+.neu-brutal-button {
+  @apply transform transition-all duration-300 hover:scale-105 active:scale-95;
+}
+
+.neu-brutal-input {
+  @apply transition-all duration-300 focus:shadow-lg;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Add hover pause */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Add this to your existing styles */
+.neu-border {
+  box-shadow: 4px 4px 0 theme('colors.gray.900');
+  border: 2px solid theme('colors.gray.900');
+}
+
+.dark .neu-border {
+  box-shadow: 4px 4px 0 theme('colors.gray.900');
+  border: 2px solid theme('colors.gray.900');
+}
+
+/* If you want to add hover effect */
+.neu-border:hover {
+  box-shadow: 6px 6px 0 theme('colors.gray.900');
+}
+
+.dark .neu-border:hover {
+  box-shadow: 6px 6px 0 theme('colors.gray.900');
+} 
