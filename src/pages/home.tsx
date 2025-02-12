@@ -39,15 +39,27 @@ export function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black font-jetbrains">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gray-50 dark:bg-[#0A0A0A] overflow-hidden">
-        {/* Grid Background - Optimized */}
+      <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 dark:bg-[#0A0A0A] overflow-hidden">
+        {/* Add background image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url("/images/smv.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.3
+          }}
+        />
+
+        {/* Grid Background - Now overlaying the image */}
         <div className="absolute inset-0 grid grid-cols-8 gap-2 opacity-10 pointer-events-none">
-          {Array.from({ length: 32 }).map((_, i) => ( // Reduced from 64 to 32
+          {Array.from({ length: 32 }).map((_, i) => (
             <div key={i} className="aspect-square border border-black/20 dark:border-white/20" />
           ))}
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 mt-0">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -279,22 +291,29 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-100 dark:bg-[#1A1A1A]">
+      <section className="py-20 bg-gradient-to-b from-gray-50/50 to-white/50 dark:from-[#1A1A1A]/50 dark:to-black/50 backdrop-blur-md">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto"
+            className="max-w-2xl mx-auto backdrop-blur-xl bg-white/20 dark:bg-black/20 p-8 rounded-2xl
+                      border border-pink-100/50 dark:border-[#00FF00]/20 shadow-xl"
           >
-            <h2 className="text-4xl font-bold mb-8 text-pink-500 dark:text-[#00FF00]">Ready to Join?</h2>
+            <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-500 to-rose-500 dark:from-[#00FF00] dark:to-[#00DD00] bg-clip-text text-transparent">
+              Ready to Join?
+            </h2>
             <Link 
               to="/registration" 
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-block px-8 py-4 bg-pink-500 dark:bg-[#00FF00] text-black dark:text-black font-bold 
-                neu-border transform hover:translate-y-[-2px] hover:translate-x-[2px] 
-                active:translate-y-[2px] active:translate-x-[-2px]
-                transition-transform duration-200"
+              className="inline-block px-8 py-4 backdrop-blur-xl bg-white/30 dark:bg-black/30
+                border-2 border-pink-100/50 dark:border-[#00FF00]/20
+                hover:border-pink-500 dark:hover:border-[#00FF00]
+                hover:scale-105 transform 
+                active:scale-95
+                transition-all duration-300
+                text-gray-800 dark:text-gray-200 font-bold
+                rounded-xl shadow-lg"
             >
               Register Now
             </Link>

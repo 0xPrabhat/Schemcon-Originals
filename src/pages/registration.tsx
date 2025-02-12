@@ -11,7 +11,7 @@ const bubbles = Array.from({ length: 8 }).map((_, i) => ({
 
 export function Registration() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains py-20 relative overflow-hidden">
+    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-8 relative overflow-hidden">
       {/* Animated Bubbles Background */}
       <div className="absolute inset-0 overflow-hidden">
         {bubbles.map((bubble) => (
