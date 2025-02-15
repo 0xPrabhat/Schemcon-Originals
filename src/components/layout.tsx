@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ScrollToTop } from './scroll-to-top';
+import { Analytics } from "@vercel/analytics/react"
 
 const FloatingBubbles = () => (
   <div className="floating-bubbles">

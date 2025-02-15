@@ -41,11 +41,12 @@ export function Submissions() {
           <h2 className="text-3xl font-bold text-pink-500 dark:text-[#00FF00] mb-6">Submission Guidelines</h2>
           <div className="prose prose-pink dark:prose-invert max-w-none">
             <ul className="list-disc pl-6 space-y-4 text-gray-700 dark:text-gray-300">
-              <li>Abstract should be in IEEE format</li>
-              <li>Maximum length: 2 pages including figures and references</li>
+              <li>Abstract should be in the format provided below</li>
+              <li>Maximum length: 1 pages including figures and references</li>
               <li>Font: Times New Roman, 12pt</li>
               <li>Single spacing with justified alignment</li>
               <li>Include keywords and author information</li>
+              <li>NOTE- Please ensure that you first navigate to 'Registration' tab and complete your registration for SCHEMCON-2025. Only after successfully registering should you proceed to abstract submission, as system will not accept abstract submissions without prior registration. </li>
             </ul>
           </div>
         </div>

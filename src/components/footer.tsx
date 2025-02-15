@@ -12,11 +12,9 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Twitter, href: "#" },
-  { icon: Instagram, href: "#" },
-  { icon: Linkedin, href: "#" },
-  { icon: Mail, href: "mailto:schemcon2025@vit.ac.in" },
+  { icon: Instagram, href: "https://www.instagram.com/iichevit/" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/iiche-vit/" },
+  { icon: Mail, href: "mailto:iicheschemcon2025@vit.ac.in" },
 ];
 
 export function Footer() {

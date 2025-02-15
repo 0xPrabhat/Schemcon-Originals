@@ -222,10 +222,58 @@ export function Committee() {
       department: "Ex DAE and Technical Consultant"
     },
     {name: "Dr. Gaurav Rattana",
-      position: "Council Member",
+      position:"Council Member",
       image: "/images/gaurav.jpeg",
-      department: "Assistant Professor, University of Twente"}
-  ];
+      department: "Assistant Professor, University of Twente"
+    },
+    {name: "Prof. Animes Kr. Golder",
+      position: "Council Member",
+      image: "/images/animesh.jpg",
+      department: "Professor, IIT Guwahati"
+    },
+    {name: "Mr. Apurba Kumar Bhattacharyya",
+      position: "Council Member",
+      image: "/images/apurba.jpg",
+      department: "Professor, IIT Guwahati"
+    },
+    {name: "Prof Nitosh Kumar Brahma",
+      position: "Council Member",
+      image: "/images/.jpg",
+      department: "Professor,  Institute of genetic Engineering"
+    }, 
+    { name: "Prof. Rakesh Kumar Trivedi",
+      position: "Council Member",
+      image: "/images/rakesh.jpeg",
+      department: "Professor, HBTU"
+    },
+    {name: "Prof. Shailendra Bajpai",
+      position: "Council Member",
+      image: "/images/bajpai.jpg",
+      department: "Professor, NIT Jalandhar"
+    },
+    {name: "Mr. K Sadanand",
+      position: "Council Member",
+      image: "/images/.jpg",
+      department: ""
+    },
+    {name: "Prof. Madhu Agarwal",
+      position: "Council Member",
+      image: "/images/madhu.png",
+      department: "Professor, MNIT Jaipur"
+    },
+    {name: "Mr. Biswanath Chattopadhyay",
+      position: "Co-opted Member",
+      image: "/images/biswanath.jpeg",
+      department: "Chief Executive Officer at IVL Dhunseri Petrochem Industries Pvt Ltd"
+    },
+    {name: "Prof. Shishir Sinha",
+      position: "Co-opted Member",
+      image: "/images/sinha.jpeg",
+      department: "Professor, IIT Roorkee"
+    }
+    
+    
+    ];                                
 
   const conveners: CommitteeMember[] = [
     {
@@ -244,93 +292,201 @@ export function Committee() {
 
   const facultyCoordinators: CommitteeMember[] = [
     {
-      name: "Dr. P. Kumar",
+      name: "Dr. Sivagami K",
       position: "Faculty Coordinator",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/sivagami.jpg",
+      department: "Associate Professor, VIT Vellore"
     },
     {
-      name: "Dr. S. Radhika",
+      name: "Dr. Ganesh Moorthy I",
       position: "Faculty Coordinator",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/ganesh.jpg",
+      department: "Associate Professor, VIT Vellore"
     },
     {
-      name: "Dr. M. Parthiban",
+      name: "Dr. Chitra D",
       position: "Faculty Coordinator",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/chitra.jpg",
+      department: "Associate Professor, VIT Vellore"
     },
     {
-      name: "Dr. N. Ramesh",
+      name: "Dr. A Babu Ponnusami",
       position: "Faculty Coordinator",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/babu.jpg",
+      department: "Professor, VIT Vellore"
+    },
+    {
+      name: "Dr. Aslam Abdullah M",
+      position: "Faculty Coordinator",
+      image: "/images/aslam.jpg",
+      department: "Associate Professor, VIT Vellore"
     }
   ];
 
   const executiveCommittee: CommitteeMember[] = [
     {
-      name: "Dr. A. Saravanan",
+      name: "Dr. Mahesh Ganesapillai",
       position: "Executive Member",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/mahesh.jpg",
+      department: "Professor , VIT Vellore"
     },
     {
-      name: "Dr. K. Ramesh",
+      name: "Dr. Anand VP Gurumoorthy",
       position: "Executive Member",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/anand.jpg",
+      department: "Professor , VIT Vellore"
     },
     {
-      name: "Dr. T. Srinivas",
+      name: "Dr. Shishir Kumar Behera",
       position: "Executive Member",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
+      image: "/images/shishir.jpg",
+      department: "Professor , VIT Vellore"
     },
     {
-      name: "Dr. L. Rajendran",
+      name: "Dr. Thomas Theodore",
       position: "Executive Member",
-      image: "/images/committee/placeholder.jpg",
-      department: "Chemical Engineering"
-    }
+      image: "/images/thomas.jpg",
+      department: "Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Aruna Singh",
+      position: "Executive Member",
+      image: "/images/aruna.jpg",
+      department: "Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Nirmala G S",
+      position: "Executive Member",
+      image: "/images/nirmala.jpg",
+      department: "Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Monash P",
+      position: "Executive Member",
+      image: "/images/monash.jpg",
+      department: "Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Shankar Raman Dhanushkodi",
+      position: "Executive Member",
+      image: "/images/shankar.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Mohammed Rehaan Chandan",
+      position: "Executive Member",
+      image: "/images/rehan.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Dharmendra Kumar Bal",
+      position: "Executive Member",
+      image: "/images/bal.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Aabid Hussain Shaik",
+      position: "Executive Member",
+      image: "/images/aabid.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Bandaru Kiran",
+      position: "Executive Member",
+      image: "/images/bandaru.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Rima Biswas",
+      position: "Executive Member",
+      image: "/images/rima.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
+    {
+      name: "Dr. Pandurangan K",
+      position: "Executive Member",
+      image: "/images/pandu.jpg",
+      department: "Associate Professor , VIT Vellore"
+    },
   ];
 
   const studentCoordinators: CommitteeMember[] = [
     {
-      name: "Rahul Sharma",
+      name: "Ahin Bagchi",
       position: "Student Coordinator",
-      image: "/images/committee/student1.jpg",
+      image: "/images/ahin.jpg",
       department: "Chemical Engineering"
     },
     {
-      name: "Priya Patel",
+      name: "Disha Talukdar",
       position: "Student Coordinator",
-      image: "/images/committee/student2.jpg",
+      image: "/images/disha.jpg",
       department: "Chemical Engineering"
     },
     {
-      name: "Arun Kumar",
+      name: "Ratna Mrinalini A.",
       position: "Student Coordinator",
-      image: "/images/committee/student3.jpg",
+      image: "/images/ratna.jpg",
       department: "Chemical Engineering"
     },
     {
-      name: "Sneha Reddy",
+      name: "Shambhavi Sathish Kumar",
       position: "Student Coordinator",
-      image: "/images/committee/student4.jpg",
+      image: "/images/shambhavi.jpg",
       department: "Chemical Engineering"
     },
     {
-      name: "Mohammed Ali",
+      name: "Ummul Kiraam Pitolwala",
       position: "Student Coordinator",
-      image: "/images/committee/student5.jpg",
+      image: "/images/ummul.jpg",
       department: "Chemical Engineering"
     },
     {
-      name: "Anjali Singh",
+      name: "Aditya Chakravarti",
       position: "Student Coordinator",
-      image: "/images/committee/student6.jpg",
+      image: "/images/aditya.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Rebiya Ramchandran",
+      position: "Student Coordinator",
+      image: "/images/rebiya.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Laasya Lahiri Kasturi",
+      position: "Student Coordinator",
+      image: "/images/laasya.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Prabhat Singh",
+      position: "Student Coordinator",
+      image: "/images/prabhat.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Annmaria Benny",
+      position: "Student Coordinator",
+      image: "/images/anmaria.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Yashu Singh",
+      position: "Student Coordinator",
+      image: "/images/yashu.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Aashtha Kale",
+      position: "Student Coordinator",
+      image: "/images/aashtha.jpg",
+      department: "Chemical Engineering"
+    },
+    {
+      name: "Indrakshi Bhattacharjee",
+      position: "Student Coordinator",
+      image: "/images/indrakshi.jpg",
       department: "Chemical Engineering"
     }
   ];

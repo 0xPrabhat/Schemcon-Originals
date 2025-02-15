@@ -5,7 +5,7 @@ const sponsorshipPrograms = [
   ['Diamond', 'Rs. 5,00,000', 'Platinum', 'Rs. 3,00,000'],
   ['Gold', 'Rs. 2,00,000', 'Silver', 'Rs. 1,00,000'],
   ['Lunch', 'Rs. 1,00,000/day', 'Dinner', 'Rs. 1,50,000/day'],
-  ['Registration Kit', 'Rs. 75,000', 'High Tea', 'Rs. 35,000/day'],
+  ['TECHNICAL PARTNER', 'Rs. 50,000', 'High Tea', 'Rs. 35,000/day'],
 ];
 
 const souvenirAds = [
@@ -80,14 +80,14 @@ export function Sponsors() {
           >
             <p className="text-lg text-black/80 dark:text-white/80 mb-8">
               For sponsorship inquiries, please contact us at{' '}
-              <a href="mailto:schemcon2025@gmail.com" className="gradient-text font-bold">
-                schemcon2025@gmail.com
+              <a href="mailto:iicheschemcon2025@vit.ac.in" className="gradient-text font-bold">
+                iicheschemcon2025@vit.ac.in
               </a>
             </p>
 
             {/* Download Brochure Button */}
             <motion.a
-              href="public/brochure.pdf"
+              href="/brochure.pdf"
               download
               className="inline-flex items-center gap-2 px-8 py-4
                         backdrop-blur-xl bg-white/40 dark:bg-zinc-900/30

@@ -44,7 +44,7 @@ export function Home() {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url("/images/smv.jpg")',
+            backgroundImage: 'url("/images/refinery.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -169,7 +169,7 @@ export function Home() {
                 <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
                   One of India's top engineering institutions, known for excellence in education and research.
                   With state-of-the-art facilities and a commitment to innovation, VIT Vellore continues to
-                  shape the future of engineering education.
+                  shape the future of engineering education.Vellore Institute of Technology or VIT is a private deemed university in Vellore, Tamil Nadu, India.The institution offers 66 Undergraduate, 58 Postgraduate, 15 Integrated, 2 Research and 2 M.Tech. Industrial Programmes. It has campuses in Vellore and Chennai and three sister universities as distinct state private universities in Amaravati, Bhopal, Bengaluru in India and an international campus in Mauritius.VIT was founded in 1984 as Vellore Engineering College, as a self-financing engineering college under Anna University by its founder G. Viswanathan. In 2001, It became Deemed university.
                 </p>
               </motion.div>
             </div>
@@ -192,7 +192,7 @@ export function Home() {
                 <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
                   The Indian Institute of Chemical Engineers (IIChE) is the premier professional organization 
                   dedicated to promoting excellence in chemical engineering education and practice in India. 
-                  Founded in 1947, IIChE has been instrumental in advancing the chemical engineering profession.
+                  Founded in 1947, IIChE has been instrumental in advancing the chemical engineering profession.The Indian Institute of Chemical Engineers (IIChE) is the professional body for chemical engineers in India. The headquarter of IIChE is in the campus of Jadavpur University, Kolkata. The organization has 42 regional centers along with 172 student chapters spread throughout India. The institution's membership comprises academics, professionals from the chemical industry, researchers, and students.IIChE also publishes scientific journal "Indian Chemical Engineer", which is published in two sections A and B. Section A provides an international platform for presenting original research work and Section B features technical articles or overview of technology with a view to guiding practicing chemical engineers.
                 </p>
               </motion.div>
 
@@ -206,7 +206,7 @@ export function Home() {
                 <h2 className="text-3xl font-bold mb-6 text-pink-500 dark:text-[#00FF00]">About IIChE Vellore Regional Center</h2>
                 <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
                   The Vellore Regional Center of IIChE serves as a vital hub for chemical engineering professionals 
-                  and students in the region. It actively promotes technical excellence and professional development.
+                  and students in the region. It actively promotes technical excellence and professional development.The Indian Institute of Chemical Engineers (IIChE) is a prominent professional body in India, dedicated to the advancement of chemical engineering. Among its various regional centers, the Vellore Regional Centre plays a significant role in fostering academic and research excellence in the field.In collaboration with the School of Chemical Engineering (SCHEME) at Vellore Institute of Technology (VIT), the Vellore Regional Centre has been instrumental in launching state-of-the-art facilities. Notably, they inaugurated the high-end "Instrumentation and Simulation Research Laboratory," aiming to provide advanced research opportunities for students and professionals alike. 
                 </p>
               </motion.div>
             </div>
@@ -225,11 +225,11 @@ export function Home() {
                 className="backdrop-blur-lg bg-white/80 dark:bg-zinc-900/80 p-8 rounded-xl shadow-xl 
                           border border-white/20 dark:border-zinc-700/20"
               >
-                <h2 className="text-3xl font-bold mb-6 text-pink-500 dark:text-[#00FF00]">About CBE Department</h2>
+                <h2 className="text-3xl font-bold mb-6 text-pink-500 dark:text-[#00FF00]">About SCHEME Department</h2>
                 <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
                   The Chemical and Biochemical Engineering Department is committed to excellence in education, 
                   research, and innovation. With state-of-the-art facilities and distinguished faculty, 
-                  the department prepares students for successful careers.
+                  the department prepares students for successful careers.Welcome to the School of Chemical Engineering (SCHEME), VIT Vellore.Since the inception in 1994, the School of Chemical Engineering has gained its capacity incrementally, first to ensure that all academic programmes were offered professionally and to ensure that the graduates produced were of the highest quality and much sought by the industry and employers.The school has state-of-the art infrastructural facilities for training the students. The students are trained by highly qualified, experienced and dedicated faculty. We stress on the importance of the latest relevant softwares and to ensure that the students are given practical hands on training on the latest software used by industries such as ASPEN PLUS, HYSYS, MATLAB, and SOLID WORKS. 
                 </p>
               </motion.div>
 
@@ -244,7 +244,7 @@ export function Home() {
                 <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
                   The MP Chary Award recognizes outstanding contributions to chemical engineering education 
                   and research. This prestigious award celebrates excellence and innovation in the field, 
-                  inspiring future generations.
+                  inspiring future generations.The M.P. Chary Award, presented annually by IIChE, honors an exceptional young Chemical Engineer under the age of 35 who has demonstrated outstanding contributions to the field. Eligible candidates include those currently pursuing a PhD or those who have successfully completed their doctorate in the past year.As part of the selection process, the awardee is required to deliver a presentation on their research work or share their insights on a chosen topic of significance. This prestigious accolade comprises the M.P. Chary Medal along with a prize of ₹10,000, recognizing excellence, innovation, and dedication in Chemical Engineering.
                 </p>
               </motion.div>
             </div>

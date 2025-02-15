@@ -11,44 +11,37 @@ export function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const mailtoLink = `mailto:iiche@vit.ac.in?subject=Contact%20Us%20Message%20from%20${encodeURIComponent(
+      formData.name
+    )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom:%20${encodeURIComponent(
+      formData.email
+    )}`;
+    window.location.href = mailtoLink;
   };
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-8 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-7xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text font-cinzel">
-            Contact Us
-          </h1>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-7xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text font-cinzel">Contact Us</h1>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="glass-container p-8 md:p-12"
-            >
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="glass-container p-8 md:p-12">
               <div className="text-center mb-8">
-                <h2 className="text-2xl font-cinzel gradient-text mb-4">
-                  Send us a Message
-                </h2>
+                <h2 className="text-2xl font-cinzel gradient-text mb-4">Send us a Message</h2>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -112,26 +105,13 @@ export function Contact() {
             </motion.div>
 
             {/* Map and Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="glass-container p-8 md:p-12 space-y-8"
-            >
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="glass-container p-8 md:p-12 space-y-8">
               <div className="text-center mb-8">
-                <h2 className="text-2xl font-cinzel gradient-text mb-4">
-                  SCHEMCON 2025
-                </h2>
-                <p className="text-black/80 dark:text-white/80">
-                  School of Chemical Engineering (SCHEME), VIT University
-                </p>
-                <p className="text-black/80 dark:text-white/80">
-                  Vellore - 632014, Tamil Nadu, India
-                </p>
-                <a 
-                  href="mailto:schemcon2025@gmail.com" 
-                  className="gradient-text font-semibold block mt-2"
-                >
-                  schemcon2025@gmail.com
+                <h2 className="text-2xl font-cinzel gradient-text mb-4">SCHEMCON 2025</h2>
+                <p className="text-black/80 dark:text-white/80">School of Chemical Engineering (SCHEME), VIT University</p>
+                <p className="text-black/80 dark:text-white/80">Vellore - 632014, Tamil Nadu, India</p>
+                <a href="mailto:iicheschemcon2025@vit.ac.in" className="gradient-text font-semibold block mt-2">
+                  iicheschemcon2025@vit.ac.in
                 </a>
               </div>
 
