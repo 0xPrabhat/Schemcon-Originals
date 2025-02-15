@@ -268,7 +268,7 @@ export function Committee() {
     },
     {name: "Prof. Shishir Sinha",
       position: "Co-opted Member",
-      image: "/images/sinha.jpeg",
+      image: "/images/siha.jpg",
       department: "Professor, IIT Roorkee"
     }
     
@@ -493,6 +493,10 @@ export function Committee() {
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-8">
+      <head>
+        <title>Committee Members - SCHEMCON 2025</title>
+        <meta name="description" content="Meet the committee members of SCHEMCON 2025." />
+      </head>
       <div className="container mx-auto px-4 relative z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}

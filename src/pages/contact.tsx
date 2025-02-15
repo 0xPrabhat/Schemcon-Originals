@@ -33,6 +33,10 @@ export function Contact() {
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-8 relative overflow-hidden">
+      <head>
+        <title>Contact Us - SCHEMCON 2025</title>
+        <meta name="description" content="Get in touch with us for inquiries about SCHEMCON 2025." />
+      </head>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text font-cinzel">Contact Us</h1>

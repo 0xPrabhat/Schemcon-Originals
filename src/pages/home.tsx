@@ -38,6 +38,10 @@ const abstractThemes = [
 export function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black font-jetbrains">
+      <head>
+        <title>SCHEMCON 2025 - Students' Chemical Engineering Congress</title>
+        <meta name="description" content="Join us for SCHEMCON 2025 at VIT Vellore, focusing on sustainable development in chemical engineering." />
+      </head>
       {/* Hero Section */}
       <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 dark:bg-[#0A0A0A] overflow-hidden">
         {/* Add background image */}

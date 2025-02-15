@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
-Sitemap: https://schemcon2025.com/sitemap.xml
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+
 Sitemap: https://www.schemcon2025.com/sitemap.xml

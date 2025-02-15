@@ -19,6 +19,10 @@ const souvenirAds = [
 export function Sponsors() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains py-20 relative overflow-hidden">
+      <head>
+        <title>Sponsorship Opportunities - SCHEMCON 2025</title>
+        <meta name="description" content="Explore sponsorship opportunities for SCHEMCON 2025 at VIT Vellore." />
+      </head>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
