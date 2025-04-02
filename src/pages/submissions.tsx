@@ -3,24 +3,24 @@ import { motion } from 'framer-motion';
 
 const timelineEvents = [
   {
-    date: "August 15, 2025",
+    date: "February 20, 2025",
     title: "Abstract Submission Opens",
     description: "Start submitting your abstracts following the template guidelines"
   },
   {
-    date: "September 1, 2025",
+    date: "May 29th, 2025",
     title: "Abstract Submission Deadline",
     description: "Last date to submit your abstracts"
   },
   {
-    date: "September 15, 2025",
+    date: "June 10th, 2025",
     title: "Abstract Acceptance Notification",
     description: "Authors will be notified about abstract acceptance"
   },
   {
-    date: "September 30, 2025",
-    title: "Final Paper Submission",
-    description: "Deadline for submitting final papers"
+    date: "September 13, 2025",
+    title: "Last Date for Registration",
+    description: "Deadline for the payment"
   }
 ];
 
@@ -46,7 +46,7 @@ export function Submissions() {
               <li>Font: Times New Roman, 12pt</li>
               <li>Single spacing with justified alignment</li>
               <li>Include keywords and author information</li>
-              <li>NOTE- Please ensure that you first navigate to 'Registration' tab and complete your registration for SCHEMCON-2025. Only after successfully registering should you proceed to abstract submission, as system will not accept abstract submissions without prior registration. </li>
+              <li>NOTE- Submit your abstract by following the proper template guideline in the submission link given below. After getting abstract acceptance confirmation, navigate to 'Registration' tab and complete your registration and fill the payment confirmation form for final confirmation.</li>
             </ul>
           </div>
         </div>
@@ -95,13 +95,21 @@ export function Submissions() {
         <div className="grid gap-6">
           {[{
             title: "Abstract Template",
-            formats: [{ name: "DOCX", link: "/Abstract-template.docx" }, { name: "PDF", link: "/Abstract-template.pdf" }]
+            formats: [
+              { name: "DOCX", link: "/Abstract-template.docx" },
+              { name: "PDF", link: "/Abstract-template.pdf" }
+            ]
           }, {
             title: "Presentation Template",
-            formats: [{ name: "PPT", link: "/Presentation-template.pptx" }, { name: "PDF", link: "/Presentation-template.pdf" }]
+            formats: [
+              { name: "PPT", link: "/Presentation-template.pptx" },
+              { name: "PDF", link: "/Presentation-template.pdf" }
+            ]
           }, {
             title: "Poster Template",
-            formats: [{ name: "PPT", link: "/Poster.pptx" }]
+            formats: [
+              { name: "PPT", link: "/poster.pptx" }  // Changed from PPT to PDF as per your comment
+            ]
           }].map((section, index) => (
             <div key={index} className="backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 rounded-xl p-8
               border border-pink-200 dark:border-zinc-700
@@ -113,7 +121,7 @@ export function Submissions() {
                   <a
                     key={idx}
                     href={format.link}
-                    download
+                    download={`${section.title}.${format.name.toLowerCase()}`}
                     className="flex items-center justify-center p-6 
                       bg-white dark:bg-zinc-800 rounded-lg 
                       border-2 border-pink-200 dark:border-zinc-700
@@ -130,6 +138,18 @@ export function Submissions() {
               </div>
             </div>
           ))}
+
+          {/* Abstract Submission Link Section */}
+          <div className="backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 rounded-xl p-8
+            border border-pink-200 dark:border-zinc-700
+            hover:border-pink-500 dark:hover:border-[#00FF00]
+            transition-all duration-300 shadow-lg">
+            <h2 className="text-3xl font-bold text-pink-500 dark:text-[#00FF00] mb-6">Abstract Submission</h2>
+            <p className="text-lg text-black/80 dark:text-white/80 leading-relaxed">
+              To submit your abstract, please follow the link below:
+              <a href="https://tinyurl.com/SCHEMCON" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 underline"> click here</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>

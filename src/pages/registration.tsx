@@ -108,8 +108,15 @@ export function Registration() {
               >
                 Register Now
             </a>
-            </div>
-          </motion.div>
+          </div>
+
+          {/* Payment Confirmation Link Section */}
+          <div className="mt-4 text-center">
+            <p className="text-lg text-gray-800 dark:text-gray-200">
+              For payment confirmation, please fill out the <a href="https://forms.gle/cR7PYuvXUDetsocKA" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 underline">Payment Confirmation Form</a>.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -284,7 +284,7 @@ export function Committee() {
     },
     {
       name: "Dr. Velu S",
-      position: "Convener",
+      position: "Convenor",
       image: "/images/velu.jpg",
       department: "HOD, SCHEME"
     }
@@ -300,7 +300,7 @@ export function Committee() {
     {
       name: "Dr. Ganesh Moorthy I",
       position: "Faculty Coordinator",
-      image: "/images/ganesh.jpg",
+      image: "/images/gm.jpg",
       department: "Associate Professor, VIT Vellore"
     },
     {
@@ -429,6 +429,41 @@ export function Committee() {
       image: "/images/ratna.jpg",
       department: "Chemical Engineering"
     },
+    {name: "Tharun Varshan",
+      position: "Student Coordinator",
+      image: "/images/tharun.png",
+      department: "Chemical Engineering"
+    },
+    {name: "Hemanth Sanjay Reddy",
+      position: "Student Coordinator",
+      image: "/images/hemanth.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Aswathy Pramod",
+      position: "Student Coordinator",
+      image: "/images/pramod.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Khushi Yadav",
+      position: "Student Coordinator",
+      image: "/images/yadav.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Sai Varshini",
+      position: "Student Coordinator",
+      image: "/images/sai.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Hemin Riya Henry",
+      position: "Student Coordinator",
+      image: "/images/hemin.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Charan Kuberan",
+      position: "Student Coordinator",
+      image: "/images/charan.jpg",
+      department: "Chemical Engineering"
+    },
     {
       name: "Shambhavi Sathish Kumar",
       position: "Student Coordinator",
@@ -448,7 +483,12 @@ export function Committee() {
       department: "Chemical Engineering"
     },
     {
-      name: "Rebiya Ramchandran",
+      name: "Aashtha Kale",
+      position: "Student Coordinator",
+      image: "/images/aashtha.jpg",
+      department: "Chemical Engineering"
+    },
+    {name: "Rebiya Ramchandran",
       position: "Student Coordinator",
       image: "/images/rebiya.jpg",
       department: "Chemical Engineering"
@@ -478,17 +518,11 @@ export function Committee() {
       department: "Chemical Engineering"
     },
     {
-      name: "Aashtha Kale",
-      position: "Student Coordinator",
-      image: "/images/aashtha.jpg",
-      department: "Chemical Engineering"
-    },
-    {
       name: "Indrakshi Bhattacharjee",
       position: "Student Coordinator",
       image: "/images/indrakshi.jpg",
       department: "Chemical Engineering"
-    }
+    },
   ];
 
   return (

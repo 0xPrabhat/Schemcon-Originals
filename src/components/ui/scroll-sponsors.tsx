@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const sponsors = [
   {
     name: 'CPCL',
-    logo: '/images/cpcl.jpg',
+    logo: '',
     type: 'platinum'
   },
   {
