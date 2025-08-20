@@ -18,7 +18,7 @@ export function Carousel({ images, interval = 5000 }: CarouselProps) {
   }, [images.length, interval]);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden rounded-xl">
+    <div className="relative h-[300px] md:h-[600px] w-full overflow-hidden rounded-xl">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -34,7 +34,7 @@ export function Carousel({ images, interval = 5000 }: CarouselProps) {
           >
             <div className="absolute inset-0 bg-black/50" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-4xl font-bold text-white text-center max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white text-center max-w-4xl mx-auto px-4">
                 {images[currentIndex].title}
               </h2>
             </div>

@@ -1,53 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
     <url>
-        <loc>https://schemcon2025.com/</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
+        <loc>https://schemcon.org/</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://schemcon2025.com/committee</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://schemcon2025.com/submissions</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://schemcon2025.com/sponsors</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://schemcon2025.com/registration</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://schemcon2025.com/contact</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://schemcon2025.com/Abstract-template.docx</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
+        <loc>https://schemcon.org/committee</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://schemcon2025.com/Abstract-template.pdf</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
+        <loc>https://schemcon.org/registration</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/sponsors</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/submissions</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/nearby-places</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/how-to-reach</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/contact</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Important Documents -->
+    <url>
+        <loc>https://schemcon.org/Abstract-template.docx</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://schemcon2025.com/Presentation-template.pdf</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
+        <loc>https://schemcon.org/Abstract-template.pdf</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://schemcon2025.com/brochure.pdf</loc>
-        <lastmod>2025-02-19T21:23:47+01:00</lastmod>
+        <loc>https://schemcon.org/Presentation-template.pdf</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/Presentation-template.pptx</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/poster.pdf</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/poster.pptx</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/brochure.pdf</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Important Resources -->
+    <url>
+        <loc>https://schemcon.org/robots.txt</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://schemcon.org/sitemap.xml</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>

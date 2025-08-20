@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
 interface CommitteeMember {
   name: string;
@@ -28,15 +29,25 @@ const cardVariants = {
 
 function CommitteeSection({ title, members }: { title: string; members: CommitteeMember[] }) {
   return (
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold text-center mb-8 gradient-text font-jetbrains">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mb-8 md:mb-16 relative z-10"
+    >
+      <motion.h2 
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:text-[#00FF00] dark:bg-none font-jetbrains drop-shadow-lg px-2"
+      >
         {title}
-      </h2>
+      </motion.h2>
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        className="grid grid-cols-1 gap-y-6 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-6 max-w-7xl mx-auto px-2 sm:px-3 md:px-4 justify-items-start"
       >
         {members.map((member, index) => (
           <motion.div
@@ -45,34 +56,35 @@ function CommitteeSection({ title, members }: { title: string; members: Committe
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="glass-container w-full max-w-sm mx-auto overflow-hidden"
+            whileHover={{ 
+              scale: 1.03,
+              transition: { duration: 0.2 }
+            }}
+            className="glass-container w-full max-w-[75vw] sm:max-w-xs mx-auto overflow-hidden group backdrop-blur-xl bg-white/95 dark:bg-black/95 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-200 dark:border-gray-800 p-1 sm:p-4"
           >
             {/* Image Container */}
-            <div className="aspect-[4/5] w-full overflow-hidden bg-gradient-to-b from-pink-100 to-pink-50 dark:from-zinc-800 dark:to-zinc-900">
-              <img 
+            <div className="aspect-[3/4] w-full overflow-hidden bg-gradient-to-b from-pink-100 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 relative rounded-xl">
+              <motion.img 
                 src={member.image} 
                 alt={member.name}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 rounded-xl"
                 loading="lazy"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             
             {/* Text Container */}
-            <div className="p-6 text-center bg-white/50 dark:bg-black/50 backdrop-blur-sm">
-              <h3 className="text-lg font-bold gradient-text font-jetbrains">
-                {member.name}
-              </h3>
-              <p className="text-sm gradient-text mt-2 font-jetbrains">
-                {member.position}
-              </p>
-              <p className="text-xs text-black/60 dark:text-white/60 mt-2 font-jetbrains">
-                {member.department}
-              </p>
+            <div className="pt-2 md:pt-3">
+              <h3 className="text-sm md:text-base font-semibold mb-1 text-gray-900 dark:text-white line-clamp-1 text-center">{member.name}</h3>
+              <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-1 line-clamp-1 text-center">{member.position}</p>
+              <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 line-clamp-2 text-center">{member.department}</p>
             </div>
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -135,7 +147,7 @@ export function Committee() {
     {
       name: "Padma Vibhushan,Prof. Man Mohan Sharma",
       position: "Advisory Member",
-      image: "/images/manmohan.webp",
+      image: "/images/manmohan.jpg",
       department: "Former Director, ICT Mumbai"
     },
     {
@@ -156,29 +168,29 @@ export function Committee() {
       image: "/images/thakar.webp",
       department: "Kutch Chemical Industries Ltd"
     },
-    {name: "Dr. R. Parthiban",
+    {name: "Dr. R Parthiban",
       position: "Vice President",
       image: "/images/Parthiban.jpg",
       department: "Professor,  Sri Sivasubramaniya Nadar College"
     },
     {name: "Parag Ratnakar Gogate",
       position: "Vice President",
-      image: "/images/gogate.jpeg",
+      image: "/images/gogate.jpg",
       department: "Professor, ICT Mumbai"
     },
-    {name: "Dr. Sunil Baran Kuila",
+    {name: "Prof. Sunil Baran Kuila",
       position: "Honorary Secretary",
       image: "/images/sunil.jpg",
       department: "Professor & Head, HIT Haldia"
     },
     {name: "Prof. K. A. Badrinarayana",
       position: "Honorary Jt. Secretary",
-      image: "/images/.jpg",
+      image: "/images/badrinarayana.jpeg",
       department: ""
     },
     {name: "Prof N Balasubramanian",
       position: "Honorary Treasurer",
-      image: "/images/bala.jpeg",
+      image: "/images/bala.jpg",
       department: "Professor, Anna University"
     },
     {name: "Mr. Dhawal Saxena",
@@ -188,7 +200,7 @@ export function Committee() {
     },
     {name: "Dr. Utkarsh Maheshwari",
       position: "Honorary Controller of Examinations",
-      image: "/images/utkarsh.jpeg",
+      image: "/images/utkarsh.jpg",
       department: "Associate Professor, Department of Chemical Engineering, DYPIEMR"
     },
     {name: "Prof. Anil Verma",
@@ -203,18 +215,18 @@ export function Committee() {
     },
     {name: "Dr. Avijit Ghosh",
       position: "Special Invitee",
-      image: "/images/ghosh.png",
+      image: "/images/ghosh.jpg",
       department: "Associate Professor, MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY, WEST BENGAL"
     },
     {name: "Smt. Sheela",
       position: "Council Member",
-      image: "/images/sheela.jpg",
-      department: "IAS (Retd.), Independent Director"
+      image: "/images/sheela.jpeg",
+      department: ""
     },
     {name: "Dr. M. Srinivasa Rao",
       position: "Council Member",
-      image: "/images/rao.png",
-      department: "Consultant Interventional Cardiologist"
+      image: "/images/srinivasa.png",
+      department: ""
     },
     {name: "Dr. Prasad T.L. Gupta",
       position: "Council Member",
@@ -223,7 +235,7 @@ export function Committee() {
     },
     {name: "Dr. Gaurav Rattana",
       position:"Council Member",
-      image: "/images/gaurav.jpeg",
+      image: "/images/rattan.jpeg",
       department: "Assistant Professor, University of Twente"
     },
     {name: "Prof. Animes Kr. Golder",
@@ -233,13 +245,13 @@ export function Committee() {
     },
     {name: "Mr. Apurba Kumar Bhattacharyya",
       position: "Council Member",
-      image: "/images/apurba.jpg",
+      image: "/images/bhattacharya.jpg",
       department: "Professor, IIT Guwahati"
     },
     {name: "Prof Nitosh Kumar Brahma",
       position: "Council Member",
-      image: "/images/.jpg",
-      department: "Professor,  Institute of genetic Engineering"
+      image: "/images/nitosh.jpeg",
+      department: ""
     }, 
     { name: "Prof. Rakesh Kumar Trivedi",
       position: "Council Member",
@@ -248,27 +260,27 @@ export function Committee() {
     },
     {name: "Prof. Shailendra Bajpai",
       position: "Council Member",
-      image: "/images/bajpai.jpg",
+      image: "/images/shailendra.png",
       department: "Professor, NIT Jalandhar"
     },
     {name: "Mr. K Sadanand",
       position: "Council Member",
-      image: "/images/.jpg",
+      image: "/images/sadanand.jpg",
       department: ""
     },
     {name: "Prof. Madhu Agarwal",
       position: "Council Member",
-      image: "/images/madhu.png",
+      image: "/images/madhu.jpeg",
       department: "Professor, MNIT Jaipur"
     },
     {name: "Mr. Biswanath Chattopadhyay",
       position: "Co-opted Member",
-      image: "/images/biswanath.jpeg",
-      department: "Chief Executive Officer at IVL Dhunseri Petrochem Industries Pvt Ltd"
+      image: "/images/biswanath.jpg",
+      department: ""
     },
     {name: "Prof. Shishir Sinha",
       position: "Co-opted Member",
-      image: "/images/siha.jpg",
+      image: "/images/sinha.jpg",
       department: "Professor, IIT Roorkee"
     }
     
@@ -277,29 +289,36 @@ export function Committee() {
 
   const conveners: CommitteeMember[] = [
     {
-      name: "Dr. L Muruganandam",
-      position: "Convenor",
-      image: "/images/murgu.jpg",
-      department: "Dean, SCHEME"
-    },
-    {
       name: "Dr. Velu S",
       position: "Convenor",
       image: "/images/velu.jpg",
-      department: "HOD, SCHEME"
+      department: "DEAN i/c, SCHEME"
+    },
+      { 
+        name: "Dr. Aslam Abdullah M",
+        position: "Faculty Coordinator",
+        image: "/images/aslam.jpg",
+        department: "HoD, SCHEME, VIT"
+      },
+
+     {
+      name: "Dr. L Muruganandam",
+      position: "Convenor",
+      image: "/images/murgu.jpg",
+      department: "Convenor, SCHEMCON"
     }
   ];
 
   const facultyCoordinators: CommitteeMember[] = [
     {
       name: "Dr. Sivagami K",
-      position: "Faculty Coordinator",
+      position: "Organiser(SCHEMCON)",
       image: "/images/sivagami.jpg",
       department: "Associate Professor, VIT Vellore"
     },
     {
       name: "Dr. Ganesh Moorthy I",
-      position: "Faculty Coordinator",
+      position: "Co-Organiser(SCHEMCON)",
       image: "/images/gm.jpg",
       department: "Associate Professor, VIT Vellore"
     },
@@ -314,12 +333,6 @@ export function Committee() {
       position: "Faculty Coordinator",
       image: "/images/babu.jpg",
       department: "Professor, VIT Vellore"
-    },
-    {
-      name: "Dr. Aslam Abdullah M",
-      position: "Faculty Coordinator",
-      image: "/images/aslam.jpg",
-      department: "Associate Professor, VIT Vellore"
     }
   ];
 
@@ -327,7 +340,7 @@ export function Committee() {
     {
       name: "Dr. Mahesh Ganesapillai",
       position: "Executive Member",
-      image: "/images/mahesh.jpg",
+      image: "/images/mahesh.jpeg",
       department: "Professor , VIT Vellore"
     },
     {
@@ -412,59 +425,6 @@ export function Committee() {
 
   const studentCoordinators: CommitteeMember[] = [
     {
-      name: "Ahin Bagchi",
-      position: "Student Coordinator",
-      image: "/images/ahin.jpg",
-      department: "Chemical Engineering"
-    },
-    {
-      name: "Disha Talukdar",
-      position: "Student Coordinator",
-      image: "/images/disha.jpg",
-      department: "Chemical Engineering"
-    },
-    {
-      name: "Ratna Mrinalini A.",
-      position: "Student Coordinator",
-      image: "/images/ratna.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Tharun Varshan",
-      position: "Student Coordinator",
-      image: "/images/tharun.png",
-      department: "Chemical Engineering"
-    },
-    {name: "Hemanth Sanjay Reddy",
-      position: "Student Coordinator",
-      image: "/images/hemanth.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Aswathy Pramod",
-      position: "Student Coordinator",
-      image: "/images/pramod.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Khushi Yadav",
-      position: "Student Coordinator",
-      image: "/images/yadav.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Sai Varshini",
-      position: "Student Coordinator",
-      image: "/images/sai.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Hemin Riya Henry",
-      position: "Student Coordinator",
-      image: "/images/hemin.jpg",
-      department: "Chemical Engineering"
-    },
-    {name: "Charan Kuberan",
-      position: "Student Coordinator",
-      image: "/images/charan.jpg",
-      department: "Chemical Engineering"
-    },
-    {
       name: "Shambhavi Sathish Kumar",
       position: "Student Coordinator",
       image: "/images/shambhavi.jpg",
@@ -494,7 +454,7 @@ export function Committee() {
       department: "Chemical Engineering"
     },
     {
-      name: "Laasya Lahiri Kasturi",
+      name: "Laasya Lahari Kasturi",
       position: "Student Coordinator",
       image: "/images/laasya.jpg",
       department: "Chemical Engineering"
@@ -526,36 +486,172 @@ export function Committee() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-8">
-      <head>
-        <title>Committee Members - SCHEMCON 2025</title>
-        <meta name="description" content="Meet the committee members of SCHEMCON 2025." />
-      </head>
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-6xl font-bold text-center mb-16 font-jetbrains flex flex-wrap justify-center gap-x-4"
-        >
-          <span className="bg-gradient-to-r from-pink-500 to-pink-600 dark:from-[#00FF00] dark:to-[#00FF00] bg-clip-text text-transparent">
-            Committee
-          </span>
-          <span className="bg-gradient-to-r from-rose-500 to-rose-600 dark:from-[#00DD00] dark:to-[#00DD00] bg-clip-text text-transparent">
-            Members
-          </span>
-        </motion.h1>
+    <>
+      <SEO title="Committee" description="Meet the committee members of SCHEMCON 2025." url="https://schemcon.org/committee" />
+      <div className="min-h-[calc(100vh-4rem)] relative bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-black dark:via-zinc-900 dark:to-[#001A00] font-jetbrains pt-4 md:pt-8 overflow-x-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, #4f46e5 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
 
-        <div className="space-y-16">
-          <CommitteeSection title="Chief Patron" members={chiefPatron} />
-          <CommitteeSection title="Patrons" members={patrons} />
-          <CommitteeSection title="National Advisory Committee" members={nationalAdvisory} />
-          <CommitteeSection title="Conveners" members={conveners} />
-          <CommitteeSection title="Faculty Coordinators" members={facultyCoordinators} />
-          <CommitteeSection title="Executive Committee" members={executiveCommittee} />
-          <CommitteeSection title="Student Coordinators" members={studentCoordinators} />
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-16 md:h-32 bg-gradient-to-b from-pink-500/20 to-transparent dark:from-[#00FF00]/20" />
+        <div className="absolute bottom-0 left-0 w-full h-16 md:h-32 bg-gradient-to-t from-pink-500/20 to-transparent dark:from-[#00FF00]/20" />
+
+        <div className="container mx-auto px-2 sm:px-3 md:px-4 relative z-10">
+          {/* Header Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-6 md:mb-16"
+          >
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-jetbrains flex flex-wrap justify-center gap-x-4"
+            >
+              <motion.span 
+                className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:text-[#00FF00] dark:bg-none drop-shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                Committee
+              </motion.span>
+              <motion.span 
+                className="text-gray-900 dark:text-white drop-shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                Members
+              </motion.span>
+            </motion.h1>
+          </motion.div>
+
+          {/* Main Content */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-12 md:space-y-24 pb-8 md:pb-20"
+          >
+            {/* Chief Patron Section with Special Styling */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 dark:from-[#00FF00]/10 dark:via-[#00FF00]/10 dark:to-[#00FF00]/10 rounded-3xl" />
+              <CommitteeSection title="Chief Patron" members={chiefPatron} />
+            </div>
+
+            {/* Patrons Section */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 dark:from-[#00FF00]/10 dark:via-[#00FF00]/10 dark:to-[#00FF00]/10 rounded-3xl" />
+              <CommitteeSection title="Patrons" members={patrons} />
+            </div>
+
+            {/* National Advisory Committee Section */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-indigo-500/10 dark:from-[#00FF00]/10 dark:via-[#00FF00]/10 dark:to-[#00FF00]/10 rounded-3xl" />
+              <CommitteeSection title="National Advisory Committee" members={nationalAdvisory} />
+            </div>
+
+            {/* Custom layout for Convenor */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-8 md:mb-16 relative z-10"
+            >
+              <motion.h2 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:text-[#00FF00] dark:bg-none font-jetbrains drop-shadow-lg px-2"
+              >
+                Convenor
+              </motion.h2>
+              <div className="flex flex-col items-start gap-6">
+                {/* First row: Dr. L Muruganandam */}
+                <div className="flex flex-wrap gap-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0 }}
+                    whileHover={{ 
+                      scale: 1.03,
+                      transition: { duration: 0.2 }
+                    }}
+                    className="glass-container w-full max-w-[75vw] sm:max-w-xs mx-auto overflow-hidden group backdrop-blur-xl bg-white/95 dark:bg-black/95 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-200 dark:border-gray-800 p-1 sm:p-4"
+                  >
+                    <div className="aspect-[3/4] w-full overflow-hidden bg-gradient-to-b from-pink-100 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 relative rounded-xl">
+                      <motion.img 
+                        src={conveners[2].image} 
+                        alt={conveners[2].name}
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 rounded-xl"
+                        loading="lazy"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <div className="pt-2 md:pt-3">
+                      <h3 className="text-sm md:text-base font-semibold mb-1 text-gray-900 dark:text-white line-clamp-1 text-center">{conveners[2].name}</h3>
+                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-1 line-clamp-1 text-center">{conveners[2].position}</p>
+                      <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 line-clamp-2 text-center">{conveners[2].department}</p>
+                    </div>
+                  </motion.div>
+                </div>
+                {/* Second row: Dr. Velu S and Dr. Aslam Abdullah M */}
+                <div className="flex flex-wrap gap-6">
+                  {[conveners[0], conveners[1]].map((member, index) => (
+                    <motion.div
+                      key={member.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ 
+                        scale: 1.03,
+                        transition: { duration: 0.2 }
+                      }}
+                      className="glass-container w-full max-w-[75vw] sm:max-w-xs mx-auto overflow-hidden group backdrop-blur-xl bg-white/95 dark:bg-black/95 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-200 dark:border-gray-800 p-1 sm:p-4"
+                    >
+                      <div className="aspect-[3/4] w-full overflow-hidden bg-gradient-to-b from-pink-100 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 relative rounded-xl">
+                        <motion.img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 rounded-xl"
+                          loading="lazy"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      <div className="pt-2 md:pt-3">
+                        <h3 className="text-sm md:text-base font-semibold mb-1 text-gray-900 dark:text-white line-clamp-1 text-center">{member.name}</h3>
+                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-1 line-clamp-1 text-center">{member.position}</p>
+                        <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 line-clamp-2 text-center">{member.department}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+            {/* Faculty Organizers Section */}
+            <CommitteeSection title="Faculty Organizers" members={[
+              facultyCoordinators[0],
+              facultyCoordinators[1]
+            ]} />
+            <CommitteeSection title="Faculty Coordinators" members={[
+              facultyCoordinators[2],
+              facultyCoordinators[3]
+            ]} />
+            <CommitteeSection title="Executive Committee" members={executiveCommittee} />
+            <CommitteeSection title="Student Coordinators" members={studentCoordinators} />
+          </motion.div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

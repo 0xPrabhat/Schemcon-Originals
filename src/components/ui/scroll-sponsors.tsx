@@ -3,33 +3,28 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const sponsors = [
   {
-    name: 'CPCL',
-    logo: '',
+    name: 'Epsilon Advanced Material Private Limited',
+    logo: '/images/epsilon.jpeg', // Corrected path
     type: 'platinum'
   },
   {
-    name: '',
-    logo: '/images/sponsors/sponsor2.png',
+    name: 'Tiruppur Company',
+    logo: '/images/.webp', // Corrected path (if this is also Epsilon)
     type: 'platinum'
   },
   {
-    name: '',
-    logo: '/images/sponsors/sponsor3.png',
+    name: 'Fusion Healthcare',
+    logo: '/images/fusion.webp',
     type: 'gold'
   },
   {
-    name: '',
-    logo: '/images/sponsors/sponsor4.png',
+    name: 'Vibrant Pharmachem',
+    logo: '/images/vibrant.jpg',
     type: 'gold'
   },
   {
-    name: '',
-    logo: '/images/sponsors/sponsor5.png',
-    type: 'silver'
-  },
-  {
-    name: '',
-    logo: '/images/sponsors/sponsor6.png',
+    name: 'Ultramarine Pigments',
+    logo: '/images/ultramarine.png',
     type: 'silver'
   },
 ];
@@ -49,15 +44,6 @@ export function ScrollSponsors() {
       ref={containerRef}
     >
       <div className="container mx-auto px-4 relative">
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-16 gradient-text font-jetbrains"
-        >
-          Our Sponsors
-        </motion.h2>
-
         {/* Desktop View with Scrolling Effect */}
         <div className="hidden md:block relative">
           {/* Gradient Fade Effects on Edges */}
@@ -96,7 +82,7 @@ export function ScrollSponsors() {
         </div>
 
         {/* Mobile Grid View */}
-        <div className="md:hidden grid grid-cols-2 gap-6">
+        <div className="md:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
           {sponsors.map((sponsor, index) => (
             <motion.div
               key={index}
@@ -104,16 +90,23 @@ export function ScrollSponsors() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center"
+              className="glass-container p-4 aspect-square flex items-center justify-center
+                       backdrop-blur-xl bg-white/60 dark:bg-zinc-900/60 
+                       border border-pink-200/50 dark:border-[#00FF00]/30 
+                       rounded-xl shadow-lg hover:shadow-xl
+                       transform hover:scale-105 transition-all duration-300"
             >
-              <img 
-                src={sponsor.logo} 
-                alt={`${sponsor.name} Logo`} 
-                className="w-16 h-16 object-contain rounded-lg mx-auto mb-2"
-              />
-              <p className="text-xs font-medium text-black/80 dark:text-white/80">
-                {sponsor.name}
-              </p>
+              <div className="text-center">
+                <img 
+                  src={sponsor.logo} 
+                  alt={`${sponsor.name} Logo`} 
+                  className="w-20 h-20 object-contain rounded-lg mx-auto mb-2
+                           group-hover:brightness-110 transition-all duration-300"
+                />
+                <p className="text-sm font-medium text-gray-800 dark:text-white/90">
+                  {sponsor.name}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

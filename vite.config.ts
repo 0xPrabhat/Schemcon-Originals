@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+  ],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
@@ -13,6 +15,6 @@ export default defineConfig({
     },
   },
   server: {
-    historyApiFallback: true, // Fixes 404 errors in development
+    // Removed historyApiFallback as it's not a valid option for Vite
   },
 });
